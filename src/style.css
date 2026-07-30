@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Variable.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal oblique 0deg 10deg;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fredoka", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-blue: #0057b7;
+  --color-brand-navy: #1c2a5e;
+  --color-brand-indigo: #3c4a9e;
+  --color-brand-periwinkle: #5c6ad0;
+  --color-brand-teal: #14b8a6;
+  --color-brand-mint: #9df3d8;
+  --color-brand-mint-dark: #4fd8b5;
+  --color-brand-cream: #f7f8fc;
+  --color-brand-ink: #12142b;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-ink);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* topo-lines background container: filled in by JS with generated SVG */
+.topo-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.topo-bg svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* language visibility toggling */
+[data-lang] {
+  display: none;
+}
+
+html[data-active-lang="de"] [data-lang="de"] {
+  display: revert;
+}
+
+html[data-active-lang="uk"] [data-lang="uk"] {
+  display: revert;
+}
+
+.lang-toggle-track {
+  transition: background-color 0.2s ease;
+}
+
+.lang-toggle-thumb {
+  transition: transform 0.2s ease;
+}
+
+/* ================= HEADER ================= */
+
+#site-header {
+  color: white;
+  background-color: transparent;
+}
+
+#site-header[data-scrolled="true"] {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(18, 20, 43, 0.06);
+  color: var(--color-brand-navy);
+}
+
+#site-header .nav-link {
+  opacity: 0.85;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+#site-header .nav-link:hover {
+  opacity: 1;
+}
+
+#site-header[data-scrolled="true"] #lang-toggle,
+#site-header[data-scrolled="true"] #mobile-menu-btn {
+  background-color: rgb(241 245 249);
+  color: var(--color-brand-navy);
+  --tw-ring-color: rgb(226 232 240);
+}
+
+/* ================= SHARED COMPONENTS ================= */
+/* Wrapped in Tailwind's components layer so utility classes
+   (hidden, md:inline-flex, etc.) always win the cascade. */
+@layer components {
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand-teal);
+}
+
+.nav-link {
+  color: inherit;
+}
+
+.mobile-nav-link {
+  padding: 0.85rem 1.1rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.mobile-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.btn-pill:hover {
+  transform: translateY(-1px);
+}
+
+.offer-card {
+  position: relative;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.offer-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(157, 243, 216, 0.4);
+}
+
+.offer-num {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-brand-mint);
+  letter-spacing: 0.05em;
+}
+
+.join-card {
+  border-radius: 1.5rem;
+  padding: 2rem 1.75rem;
+  background-color: white;
+  border: 1px solid rgb(226 232 240);
+  box-shadow: 0 1px 2px rgba(18, 20, 43, 0.04);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.join-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 30px -18px rgba(28, 42, 94, 0.25);
+}
+
+.form-input {
+  margin-top: 0.4rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(226 232 240);
+  padding: 0.65rem 0.9rem;
+  font-size: 0.95rem;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: var(--color-brand-teal);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+}
+
+.funder-chip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-brand-navy);
+  background-color: rgb(241 245 249);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  line-height: 1.2;
+  max-width: 220px;
+}
+
+} /* end @layer components */

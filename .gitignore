@@ -1,0 +1,9 @@
+# Design source files / references (not part of the web project)
+Materials/
+Peer-Mentor/
+*.docx
+
+# Node / Vite build output
+node_modules
+dist
+.DS_Store
