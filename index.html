@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <script type="module" src="/src/main.js"></script>
@@ -32,20 +32,18 @@
       data-header
     >
       <div
-        class="mx-auto max-w-7xl px-5 sm:px-8 flex items-center justify-between h-20"
+        class="header-bar mx-auto max-w-7xl px-5 sm:px-8 flex items-center justify-between h-20"
       >
         <a href="#top" class="flex items-center gap-3 shrink-0">
           <img
             src="/src/assets/logo-white.svg"
             alt="Club Nova LiTerra"
-            class="h-9 w-auto"
+            class="w-auto"
             data-logo
-            data-logo-light="/src/assets/logo-white.svg"
-            data-logo-dark="/src/assets/logo-color.svg"
           />
         </a>
 
-        <nav class="hidden lg:flex items-center gap-9 font-medium text-[15px]">
+        <nav class="hidden lg:flex items-center gap-8 font-semibold text-lg">
           <a class="nav-link" href="#projekt">
             <span data-lang="de">Über das Projekt</span
             ><span data-lang="uk">Про проєкт</span>
@@ -57,10 +55,6 @@
           <a class="nav-link" href="#mitmachen">
             <span data-lang="de">Mitmachen</span
             ><span data-lang="uk">Долучитися</span>
-          </a>
-          <a class="nav-link" href="#termine">
-            <span data-lang="de">Termine</span
-            ><span data-lang="uk">Терміни</span>
           </a>
           <a class="nav-link" href="#kontakt">
             <span data-lang="de">Kontakt</span
@@ -90,14 +84,6 @@
               >UKR</span
             >
           </button>
-
-          <a
-            href="#mitmachen"
-            class="hidden md:inline-flex btn-pill bg-brand-mint text-brand-navy hover:bg-brand-mint-dark"
-          >
-            <span data-lang="de">Mitmachen</span
-            ><span data-lang="uk">Долучитися</span>
-          </a>
 
           <button
             id="mobile-menu-btn"
@@ -139,10 +125,6 @@
             <span data-lang="de">Mitmachen</span
             ><span data-lang="uk">Долучитися</span>
           </a>
-          <a class="mobile-nav-link" href="#termine">
-            <span data-lang="de">Termine</span
-            ><span data-lang="uk">Терміни</span>
-          </a>
           <a class="mobile-nav-link" href="#kontakt">
             <span data-lang="de">Kontakt</span
             ><span data-lang="uk">Контакти</span>
@@ -157,10 +139,8 @@
       <!-- ================= HERO ================= -->
       <section
         id="hero"
-        class="relative isolate overflow-hidden bg-gradient-to-br from-brand-navy via-brand-indigo to-brand-periwinkle"
+        class="relative isolate overflow-hidden bg-[url('/src/assets/topo-bg.jpg')] bg-cover bg-center"
       >
-        <div class="topo-bg text-brand-teal/70" data-topo data-topo-density="14"></div>
-
         <div
           class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 pt-32 pb-20 md:pt-40 md:pb-28"
         >
@@ -206,11 +186,6 @@
               >
             </p>
 
-            <p class="mt-4 text-[15px] font-medium text-brand-navy">
-              <span data-lang="de">Die Laufzeit des Projekts ist vom 15. Juni 2026 bis Ende 2027.</span>
-              <span data-lang="uk">Тривалість проєкту — з 15 червня 2026 року до кінця 2027 року.</span>
-            </p>
-
             <a href="#projekt" class="btn-pill bg-brand-mint text-brand-navy hover:bg-brand-mint-dark mt-7">
               <span data-lang="de">Mehr erfahren</span
               ><span data-lang="uk">Дізнатися більше</span>
@@ -248,13 +223,13 @@
                   Ende August 2025 sind viele insbesondere männliche
                   Geflüchtete aus der Ukraine im Alter von 18 bis 22 Jahren
                   auch nach Sachsen gekommen. Nach vier Jahren unter den
-                  Bedingungen des Krieges eröffnete sich für diese junge
+                  Bedingungen des Krieges eröffnete sich für diese jungen
                   Menschen erstmals die Möglichkeit, ihr Leben in einem
                   sicheren Umfeld neu auszurichten und sich auf Bildungswege,
                   berufliche Perspektiven sowie gesellschaftliche Teilhabe zu
                   konzentrieren. Der Übergang in stabilere
                   Lebensverhältnisse gestaltet sich jedoch aus vielen Gründen
-                  herausfordernd. Die jungen Menschen erfahren sich häufig in
+                  herausfordernd. Die jungen Menschen befinden sich häufig in
                   einer Situation erhöhter sozialer Isolation, eingeschränkter
                   Orientierungsmöglichkeiten und begrenzter gesellschaftlicher
                   Teilhabe.</span
@@ -285,8 +260,8 @@
                   >Gemeinsam mit ehrenamtlichen Peer-Mentor*innen wollen wir
                   junge Menschen dabei unterstützen, sich in der deutschen
                   Migrationsgesellschaft sozial, kulturell und institutionell
-                  besser zu orientieren, ihnen Teilhabeperspektiven aufzeigen
-                  und Selbstwirksamkeitserfahrungen ermöglichen.</span
+                  besser zu orientieren, ihnen Teilhabeperspektiven aufzuzeigen
+                  und Selbstwirksamkeitserfahrungen zu ermöglichen.</span
                 >
                 <span data-lang="uk"
                   >Разом із Peer-менторами та менторками ми хочемо
@@ -315,9 +290,16 @@
         </div>
       </section>
 
+      <!-- ================= PROJEKTLAUFZEIT ================= -->
+      <div class="border-t border-slate-200 bg-white">
+        <p class="mx-auto max-w-7xl px-5 sm:px-8 py-6 text-[15px] font-medium text-brand-navy">
+          <span data-lang="de">Die Laufzeit des Projekts ist vom 15. Juni 2026 bis Ende 2027.</span>
+          <span data-lang="uk">Тривалість проєкту — з 15 червня 2026 року до кінця 2027 року.</span>
+        </p>
+      </div>
+
       <!-- ================= WAS PASSIERT IM PROJEKT ================= -->
-      <section id="angebote" class="relative py-20 sm:py-28 scroll-mt-24 bg-brand-navy text-white overflow-hidden">
-        <div class="topo-bg text-brand-teal/40" data-topo data-topo-density="10"></div>
+      <section id="angebote" class="relative py-20 sm:py-28 scroll-mt-24 bg-[url('/src/assets/topo-bg.jpg')] bg-cover bg-center text-white overflow-hidden">
 
         <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
           <div class="max-w-2xl">
@@ -343,8 +325,8 @@
                 ><span data-lang="uk">Тематичні семінари</span>
               </h3>
               <p class="mt-2 text-sm text-white/70">
-                <span data-lang="de">Zu migrationsgesellschaftlicher Orientierung.</span
-                ><span data-lang="uk">З орієнтації в міграційному суспільстві.</span>
+                <span data-lang="de">zu migrationsgesellschaftlicher Orientierung</span
+                ><span data-lang="uk">З орієнтації в міграційному суспільстві</span>
               </p>
             </div>
             <!-- card 2 -->
@@ -355,8 +337,8 @@
                 ><span data-lang="uk">Платформи для обміну думками</span>
               </h3>
               <p class="mt-2 text-sm text-white/70">
-                <span data-lang="de">Zu den für junge Menschen relevanten Themen.</span
-                ><span data-lang="uk">Щодо тем, актуальних для молодих людей.</span>
+                <span data-lang="de">zu den für junge Menschen relevanten Themen</span
+                ><span data-lang="uk">Щодо тем, актуальних для молодих людей</span>
               </p>
             </div>
             <!-- card 3 -->
@@ -367,8 +349,8 @@
                 ><span data-lang="uk">Екскурсії</span>
               </h3>
               <p class="mt-2 text-sm text-white/70">
-                <span data-lang="de">An Orte des jungen Engagements und der Kultur in Sachsen.</span
-                ><span data-lang="uk">До місць молодіжної активності та культури в Саксонії.</span>
+                <span data-lang="de">an Orte des jungen Engagements und der Kultur in Sachsen</span
+                ><span data-lang="uk">До місць молодіжної активності та культури в Саксонії</span>
               </p>
             </div>
             <!-- card 4 -->
@@ -379,7 +361,7 @@
                 ><span data-lang="uk">Стажування</span>
               </h3>
               <p class="mt-2 text-sm text-white/70">
-                <span data-lang="de">Bei einzelnen Organisationen.</span
+                <span data-lang="de">bei einzelnen Organisationen</span
                 ><span data-lang="uk">В окремих організаціях.</span>
               </p>
             </div>
@@ -391,7 +373,7 @@
                 ><span data-lang="uk">Майстерні</span>
               </h3>
               <p class="mt-2 text-sm text-white/70">
-                <span data-lang="de">Für die Entwicklung eigener Projekte und künstlerische Produktionen.</span
+                <span data-lang="de">für die Entwicklung eigener Projekte und künstlerische Produktionen</span
                 ><span data-lang="uk">Для розробки власних проєктів та художніх продуктів.</span>
               </p>
             </div>
@@ -407,7 +389,7 @@
               <span data-lang="de">Mitmachen</span><span data-lang="uk">Долучитися</span>
             </span>
             <h2 class="font-display mt-4 text-2xl sm:text-3xl text-brand-navy">
-              <span data-lang="de">Wie kannst Du Dich beteiligen?</span
+              <span data-lang="de">Wie kannst du dich beteiligen?</span
               ><span data-lang="uk">Як ти можеш долучитися?</span>
             </h2>
           </div>
@@ -421,12 +403,12 @@
               </h3>
               <p class="mt-3 text-slate-600 text-[15px] leading-relaxed">
                 <span data-lang="de"
-                  >Hast Du Lust, Dich als Workshop-Leitende auszuprobieren?
+                  >Hast du Lust, dich als Workshop-Leitende auszuprobieren?
                   Oder spannende Organisationen und kulturelle Orte in
                   Sachsen kennenzulernen und Exkursionen in diese zu
                   begleiten? Oder mit den Teilnehmenden Projekte und
                   Produktionen zu entwickeln, um gemeinsame Themen und
-                  Interessen in Austausch und in die Öffentlichkeit zu
+                  Interessen in den Austausch und in die Öffentlichkeit zu
                   bringen?</span
                 >
                 <span data-lang="uk"
@@ -439,7 +421,7 @@
                 >
               </p>
               <p class="mt-5 font-display text-brand-teal">
-                <span data-lang="de">Wir freuen uns auf Dich!</span
+                <span data-lang="de">Wir freuen uns auf dich!</span
                 ><span data-lang="uk">Ми зрадіємо тобі!</span>
               </p>
             </div>
@@ -454,7 +436,7 @@
                 <span data-lang="de"
                   >Habt Ihr Interesse als Organisation, Projekt, Initiative,
                   Personen mit uns zusammenzuarbeiten, mit uns
-                  Austauschrunden zu organisieren, bei Ihnen Workshops
+                  Austauschrunden zu organisieren, bei Euch Workshops
                   durchführen zu lassen oder einen Exkursions- bzw.
                   Praktika-Ort anzubieten?</span
                 >
@@ -479,7 +461,7 @@
               </h3>
               <p class="mt-3 text-slate-600 text-[15px] leading-relaxed">
                 <span data-lang="de"
-                  >Hast Du Lust, bei den Workshops, Austauschrunden,
+                  >Hast du Lust, bei den Workshops, Austauschrunden,
                   Exkursionen und Werkstätten dabei zu sein und selbst
                   Projekte zu entwickeln?</span
                 >
@@ -489,7 +471,7 @@
                 >
               </p>
               <p class="mt-5 font-display text-brand-teal">
-                <span data-lang="de">Wir freuen uns auf Dich!</span
+                <span data-lang="de">Wir freuen uns auf dich!</span
                 ><span data-lang="uk">Ми зрадіємо тобі!</span>
               </p>
             </div>
@@ -505,53 +487,6 @@
             <span data-lang="uk"
               >Мови клубу — українська, німецька, англійська та всі інші,
               які допоможуть нам краще порозумітися!</span
-            >
-          </p>
-        </div>
-      </section>
-
-      <!-- ================= TERMINE ================= -->
-      <section
-        id="termine"
-        class="relative py-20 sm:py-28 scroll-mt-24 bg-gradient-to-br from-brand-indigo via-brand-navy to-brand-navy text-white overflow-hidden"
-      >
-        <div class="topo-bg text-brand-teal/40" data-topo data-topo-density="10"></div>
-
-        <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
-          <span class="eyebrow text-brand-mint">
-            <span data-lang="de">Termine</span><span data-lang="uk">Терміни</span>
-          </span>
-          <h2 class="font-display mt-4 text-2xl sm:text-3xl max-w-xl">
-            <span data-lang="de">Die Projektlaufzeit auf einen Blick</span
-            ><span data-lang="uk">Тривалість проєкту на один погляд</span>
-          </h2>
-
-          <div class="mt-12 grid sm:grid-cols-2 gap-6 max-w-2xl">
-            <div class="rounded-2xl bg-white/10 ring-1 ring-inset ring-white/15 p-6">
-              <p class="text-xs uppercase tracking-widest text-brand-mint font-semibold">
-                <span data-lang="de">Projektstart</span><span data-lang="uk">Початок проєкту</span>
-              </p>
-              <p class="font-display text-2xl mt-2">15.06.2026</p>
-            </div>
-            <div class="rounded-2xl bg-white/10 ring-1 ring-inset ring-white/15 p-6">
-              <p class="text-xs uppercase tracking-widest text-brand-mint font-semibold">
-                <span data-lang="de">Projektende</span><span data-lang="uk">Завершення проєкту</span>
-              </p>
-              <p class="font-display text-2xl mt-2">
-                <span data-lang="de">Ende 2027</span><span data-lang="uk">Кінець 2027</span>
-              </p>
-            </div>
-          </div>
-
-          <p class="mt-8 max-w-xl text-white/70 text-[15px]">
-            <span data-lang="de"
-              >Konkrete Termine für Workshops, Austauschrunden und
-              Exkursionen werden hier laufend ergänzt, sobald das Projekt
-              startet.</span
-            >
-            <span data-lang="uk"
-              >Конкретні дати воркшопів, зустрічей для обміну думками та
-              екскурсій будуть додаватися тут у міру запуску проєкту.</span
             >
           </p>
         </div>
@@ -603,27 +538,27 @@
               <label class="text-sm font-medium text-brand-navy" for="name">
                 <span data-lang="de">Name</span><span data-lang="uk">Ім'я</span>
               </label>
-              <input id="name" name="name" type="text" class="form-input" />
+              <input id="name" name="name" type="text" class="form-input" required />
             </div>
             <div>
               <label class="text-sm font-medium text-brand-navy" for="email">
                 <span data-lang="de">E-Mail</span><span data-lang="uk">Електронна пошта</span>
               </label>
-              <input id="email" name="email" type="email" class="form-input" />
+              <input id="email" name="email" type="email" class="form-input" required />
             </div>
             <div>
               <label class="text-sm font-medium text-brand-navy" for="message">
                 <span data-lang="de">Nachricht</span><span data-lang="uk">Повідомлення</span>
               </label>
-              <textarea id="message" name="message" rows="4" class="form-input resize-none"></textarea>
+              <textarea id="message" name="message" rows="4" class="form-input resize-none" required></textarea>
             </div>
             <button type="submit" class="btn-pill w-full justify-center bg-brand-navy text-white hover:bg-brand-indigo">
               <span data-lang="de">Nachricht senden</span
               ><span data-lang="uk">Надіслати повідомлення</span>
             </button>
             <p class="text-xs text-slate-400 text-center">
-              <span data-lang="de">Formular-Demo – noch ohne Versandfunktion.</span>
-              <span data-lang="uk">Демо-форма — поки без функції надсилання.</span>
+              <span data-lang="de">Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht.</span>
+              <span data-lang="uk">Відкриває твою поштову програму з уже заповненим повідомленням.</span>
             </p>
           </form>
         </div>
@@ -635,20 +570,11 @@
       <div class="mx-auto max-w-7xl px-5 sm:px-8 py-12">
         <div class="grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <img src="/src/assets/logo-color.svg" alt="Club Nova LiTerra" class="h-8 w-auto" />
+            <img src="/src/assets/logo-color.svg" alt="Club Nova LiTerra" class="h-11 w-auto" />
             <p class="mt-4 text-sm text-slate-500 max-w-sm leading-relaxed">
               <span data-lang="de">Diese Maßnahme wird mitfinanziert mit Steuermitteln auf Grundlage des vom Sächsischen Landtag beschlossenen Haushaltes.</span>
               <span data-lang="uk">Цей захід співфінансується за рахунок податкових надходжень на підставі бюджету, затвердженого Саксонським ландтагом.</span>
             </p>
-            <p class="mt-3 text-xs text-slate-400">
-              <span data-lang="de">Gefördert durch:</span><span data-lang="uk">За підтримки:</span>
-            </p>
-            <div class="mt-3 flex flex-wrap items-center gap-x-6 gap-y-3">
-              <span class="funder-chip">Integration Sachsen</span>
-              <span class="funder-chip">Staatsministerium für Soziales, Gesundheit und gesellschaftlichen Zusammenhalt</span>
-              <span class="funder-chip">Freistaat Sachsen</span>
-              <span class="funder-chip">Verband binationaler Familien und Partnerschaften</span>
-            </div>
           </div>
 
           <nav class="md:justify-self-end">
@@ -658,20 +584,37 @@
             <ul class="space-y-2 text-sm text-slate-600">
               <li><a class="hover:text-brand-blue" href="#projekt"><span data-lang="de">Über das Projekt</span><span data-lang="uk">Про проєкт</span></a></li>
               <li><a class="hover:text-brand-blue" href="#mitmachen"><span data-lang="de">Mitmachen</span><span data-lang="uk">Долучитися</span></a></li>
-              <li><a class="hover:text-brand-blue" href="#termine"><span data-lang="de">Termine</span><span data-lang="uk">Терміни</span></a></li>
               <li><a class="hover:text-brand-blue" href="#kontakt"><span data-lang="de">Kontakt</span><span data-lang="uk">Контакти</span></a></li>
             </ul>
           </nav>
         </div>
 
+        <div class="mt-12">
+          <p class="text-xs text-slate-400">
+            <span data-lang="de">Gefördert durch:</span><span data-lang="uk">За підтримки:</span>
+          </p>
+          <div class="mt-3 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <img
+              src="/src/assets/gefoerdert_durch.png"
+              alt="Integration Sachsen, Staatsministerium für Soziales, Gesundheit und gesellschaftlichen Zusammenhalt, Freistaat Sachsen"
+              class="h-10 w-auto"
+            />
+            <img
+              src="/src/assets/funder-vbfp.png"
+              alt="Verband binationaler Familien und Partnerschaften"
+              class="h-12 w-auto"
+            />
+          </div>
+        </div>
+
         <div class="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center sm:justify-between text-xs text-slate-400">
           <p>Copyright © 2026 Verband binationaler Familien und Partnerschaften Leipzig</p>
           <div class="flex flex-wrap gap-x-5 gap-y-2">
-            <a class="hover:text-brand-blue" href="#">Impressum</a>
-            <a class="hover:text-brand-blue" href="#">Datenschutz</a>
-            <a class="hover:text-brand-blue" href="#">Cookie-Präferenzen</a>
-            <a class="hover:text-brand-blue" href="#">Barrierefreiheitserklärung</a>
-            <a class="hover:text-brand-blue" href="#">Allgemeine Geschäftsbedingungen</a>
+            <a class="hover:text-brand-blue" href="https://binational-leipzig.de/impressum/" target="_blank" rel="noopener">Impressum</a>
+            <a class="hover:text-brand-blue" href="https://binational-leipzig.de/datenschutz/" target="_blank" rel="noopener">Datenschutz</a>
+            <a class="hover:text-brand-blue" href="https://binational-leipzig.de/datenschutz/" target="_blank" rel="noopener">Cookie-Präferenzen</a>
+            <a class="hover:text-brand-blue" href="https://binational-leipzig.de/barrierefreiheitserklaerung/" target="_blank" rel="noopener">Barrierefreiheitserklärung</a>
+            <a class="hover:text-brand-blue" href="https://binational-leipzig.de/agb/" target="_blank" rel="noopener">Allgemeine Geschäftsbedingungen</a>
           </div>
         </div>
       </div>
