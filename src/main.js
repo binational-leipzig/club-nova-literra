@@ -68,6 +68,52 @@ mobileMenu?.querySelectorAll('a').forEach((link) => {
 })
 
 /* ---------------------------------------------------------
+   Aktuelles: video cards. The poster overlay starts playback
+   and hands over to the native controls; only one video
+   plays at a time.
+--------------------------------------------------------- */
+const videoFrames = document.querySelectorAll('[data-video]')
+
+videoFrames.forEach((frame) => {
+  const video = frame.querySelector('video')
+  const cover = frame.querySelector('[data-video-cover]')
+  if (!video || !cover) return
+
+  cover.addEventListener('click', () => {
+    frame.setAttribute('data-started', 'true')
+    video.controls = true
+    video.play()
+    video.focus()
+  })
+
+  video.addEventListener('play', () => {
+    videoFrames.forEach((other) => {
+      const otherVideo = other.querySelector('video')
+      if (otherVideo && otherVideo !== video) otherVideo.pause()
+    })
+  })
+})
+
+/* ---------------------------------------------------------
+   Aktuelles: event status. Items with data-event-date
+   (YYYY-MM-DD) get data-event-status="today" | "past" |
+   "upcoming", compared against the visitor's local date;
+   CSS shows the matching badge.
+--------------------------------------------------------- */
+const now = new Date()
+const todayKey = [
+  now.getFullYear(),
+  String(now.getMonth() + 1).padStart(2, '0'),
+  String(now.getDate()).padStart(2, '0'),
+].join('-')
+
+document.querySelectorAll('[data-event-date]').forEach((item) => {
+  const date = item.getAttribute('data-event-date')
+  const status = date === todayKey ? 'today' : date < todayKey ? 'past' : 'upcoming'
+  item.setAttribute('data-event-status', status)
+})
+
+/* ---------------------------------------------------------
    Contact form: no backend, so it opens the visitor's own
    email app via a mailto: link, prefilled with their input
 --------------------------------------------------------- */
